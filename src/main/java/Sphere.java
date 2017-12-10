@@ -11,10 +11,16 @@ class Sphere {
     }
 
     double sferosPlotas(){
-        return 4*3.14*r*r;
+        if (r == 0)
+            throw new IllegalArgumentException("Spindulys lygus 0");
+        else
+            return 4*3.14*r*r;
     }
 
     double sferosTuris(){
-        return (4.0/3.0)*3.14*(r*r*r);
+        if (r == 0)
+            throw new IllegalArgumentException("Spindulys lygus 0");
+        else
+            return (4.0/3.0)*3.14*(r*r*r);
     }
 }
