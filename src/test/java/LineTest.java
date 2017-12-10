@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class LineTest {
@@ -25,6 +26,33 @@ public class LineTest {
         Line line = new Line(0, 1, 0, 7);
         line.rastiNuolydi();
     }
+
+    @Test
+    public void kaiIvedamiDuomenysTiesesIlgisYra1(){
+        Line line = new Line(0,0,1,1);
+        Assert.assertEquals(1, line.rastiIlgi(), 1);
+    }
+
+    @Test
+    public void kaiIvedamiDuomenysTiesesIlgisYra0(){
+        Line line = new Line(0,0,0,0);
+        Assert.assertEquals(0, line.rastiIlgi(), 1);
+    }
+
+    @Test
+    public void kaiTiesesVienodosJosYraLygiagrecios(){
+        Line line = new Line(2, 1, 4, 7);
+        Line line2 = new Line(2, 1, 4, 7);
+        Assert.assertEquals(true, line.arLygiagrecios(line2));
+    }
+
+    @Test
+    public void kaiTiesesNevienodosJosYraNelygiagrecios(){
+        Line line = new Line(2, 1, 4, 7);
+        Line line2 = new Line(1, 1, 4, 7);
+        Assert.assertEquals(false, line.arLygiagrecios(line2));
+    }
+
 
 
 
