@@ -5,7 +5,16 @@ class Sphere {
         this.r = r;
     }
 
-    private double sferosPlotas(){
-        return r;
+    @Override
+    public String toString() {
+        return "r = " + r;
+    }
+
+    double sferosPlotas(){
+        return 4*3.14*r*r;
+    }
+
+    double sferosTuris(){
+        return (4.0/3.0)*3.14*(r*r*r);
     }
 }
