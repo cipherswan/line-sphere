@@ -47,6 +47,13 @@ public class LineTest {
     }
 
     @Test
+    public void kaiTiesesVienodosPerVienaJosYraLygiagrecios(){
+        Line line = new Line(2,1,4,7);
+        Line line1 = new Line(1,0,3,6);
+        Assert.assertEquals(true, line.arLygiagrecios(line1));
+    }
+
+    @Test
     public void kaiTiesesNevienodosJosYraNelygiagrecios(){
         Line line = new Line(2, 1, 4, 7);
         Line line2 = new Line(1, 1, 4, 7);
